@@ -39,3 +39,16 @@ var check = function(nums) {
 };
 var nums = [7,9,1,1,1,3];
 console.log(check(nums));
+
+//attempt 2
+var check = function(nums) {
+     let occurance = 0;
+    for(let i = 0; i < nums.length-1; i++) {
+        if(nums[i] > nums[i+1]) occurance++;
+    }
+    nums[nums.length-1] > nums[0] && occurance++;
+    return occurance < 2 ? true : false; 
+};
+
+var nums = [2,1,3,4]
+console.log(check(nums)]
